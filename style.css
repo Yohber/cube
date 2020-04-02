@@ -1,0 +1,68 @@
+body {
+margin:0;
+padding:0;
+background:#aaaaaa;
+transform-style:preserve-3d;
+background: linear-gradient(225deg, purple, orange);
+}
+h1{
+	font-size: 40px;
+	text-align: center;
+	padding: 30px;
+	color: blue;
+}
+#container {
+position:absolute;
+width:400px;
+height:400px;
+top:calc(50% - 200px);
+left:calc(50% - 200px);
+background:transparent;
+transform-style:preserve-3d;
+}
+#cube {
+position:absolute;
+width:300px;
+height:300px;
+top:calc(50% - 150px);
+left:calc(50% - 150px);
+transform-style:preserve-3d;
+perspective:80000px;
+background:green;
+transition:8s;
+}
+.face{
+width:300px;
+height:300px;
+position:absolute;
+transform-style:preserve-3d;
+background-size: cover;
+background-position: center;
+}
+#avant{
+background-image: url("Florian.jpg");
+transform:translateZ(150px);
+}
+#arriere{
+background-image: url("Florian2.jpg");
+transform:translateZ(-150px) rotateZ(90deg);
+}
+#droite{
+background-image: url("Florian3.jpg");
+transform:translateX(150px) rotateY(90deg);
+}
+#gauche {
+background-image: url("Florian4.jpg");
+transform:translateX(-150px) rotateY(-90deg);
+}
+#dessus {
+background-image: url("Florian5.jpg");
+transform:translateY(150px) rotateX(90deg);
+}
+#dessous {
+background-image: url("Florian6.jpg");
+transform:translateY(-150px) rotateX(-90deg);
+}
+#cube:active{
+transform:rotateX(180deg) rotateY(360deg) rotateZ(450deg);
+}
